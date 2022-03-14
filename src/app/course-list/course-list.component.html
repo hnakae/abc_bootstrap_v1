@@ -1,0 +1,43 @@
+<div class="container" style="margin-top: 70px;">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Video Link</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses">
+  
+          <td>{{ course.id }}</td>
+          <td> {{ course.title }}</td>
+          <td> {{ course.video }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="selectCourse(course)"> Show details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    
+    <div class="card text-center" *ngIf="selectedCourse">
+      <div class="card-header">
+        # {{selectedCourse.id}}
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{selectedCourse.title}}</h4>
+        <iframe  [src]="safeUrl(selectedCourse.video)"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe  src="{{safeUrl(selectedCourse.video)}}"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <!-- <iframe  [src]="selectedCourse.video"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <p class="card-text">
+          {{selectedCourse.description}}
+        </p>    
+      </div>
+      <!-- width="1128" height="644" -->
+    </div>
+
+    
+  </div>
+  

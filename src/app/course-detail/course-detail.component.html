@@ -1,0 +1,15 @@
+<div class="card text-center" *ngIf="selectedCourse">
+    <div class="card-header">
+      # {{selectedCourse.id}}
+    </div>
+    <div class="card-block">
+      <h4 class="card-title">{{selectedCourse.title}}</h4>
+      <iframe  [src]="safeUrl(selectedCourse.video)"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- <iframe  src="{{safeUrl(selectedCourse.video)}}"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <iframe  [src]="selectedCourse.video"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- <p class="card-text">
+        {{selectedCourse.description}}
+      </p>    
+    </div>
+    <!-- width="1128" height="644" -->
+  </div> -->

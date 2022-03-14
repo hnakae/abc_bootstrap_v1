@@ -1,0 +1,15 @@
+<div class="jumbotron" style="background-color: #fff; height: calc(95vh);">
+    <h1>NEW ARRIVALS</h1>
+    <p class="lead">
+      Display list of new arrivals and list of recommended content  
+    </p>
+    <tr *ngFor="let course of courses">
+      <td> {{ course.title }}</td>
+      <td>
+        <!-- <iframe  [src]="safeUrl(selectedCourse.video)"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      </td>
+    </tr>
+    <!-- <img src="../../assets/displayList.PNG" alt=""> -->
+    <!-- <a class="btn btn-lg btn-primary" href="" role="button">View tutorial</a> -->
+  </div>
+  
